@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>CALCULATOR</title>
+        <link rel="stylesheet" href="maytinh.css">
+    </head>
+    <body>
+        <table >
+          
+            <tr>
+                <td colspan="4"><input class="bb" id="result" type="text"></td>
+            </tr>
+            <tr>
+                <td><input class="cal" type="button" value="("onclick="result.value+=this.value"/></td>
+                <td><input class="cal" type="button" value=")"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="%"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="AC"onclick="result.value=''"></td>
+            </tr>
+            <tr>
+                <td><input class="cal" type="button" value="7"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="8"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="9"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="/"onclick="result.value+=this.value"></td>
+            </tr>
+            <tr>
+                <td><input class="cal" type="button" value="4"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="5"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="6"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="*"onclick="result.value+=this.value"></td> 
+            </tr>
+            <tr class=>
+                <td><input class="cal" type="button" value="1"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="2"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="3"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="-"onclick="result.value+=this.value"></td>s
+            </tr>
+            <tr class=>
+                <td><input class="cal" type="button" value="0"onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="."onclick="result.value+=this.value"></td>
+                <td><input class="cal" type="button" value="="onclick="result.value= eval (result.value)"></td>
+                <td><input class="cal" type="button" value="+"onclick="result.value+=this.value"></td>
+            </tr>
+        </table>
+    </body>
+</html>

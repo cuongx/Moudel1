@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Điểm Trung Bình</title>
+</head>
+<body>
+    <input type="text" id="thang"placeholder="vui lòng nhập tháng">
+    <input type="text" id="nam" placeholder="vui lòng nhập năm">
+    <button onclick="kiemtra()" >kiểmtra</button>
+    <p id="ra" ></p>
+   <script>
+    function kiemtra(){
+     let thang=+document.getElementById("thang").value
+     let nam=+document.getElementById("nam").value
+     let nhuan;
+     let kq;
+     if ((nam%4==0 && nam%100!=0) || (nam%400==0))
+     {nhuan=1}
+               else {nhuan=0}
+     if (nhuan==1 && thang==2){
+         document.getElementById("ra").innerHTML="tháng 2 có 29 ngày"
+     }
+   
+     else if (nhuan==0 && thang==2){
+       document.getElementById("ra").innerHTML="tháng 2 co 28 ngày"
+     }
+     switch ((thang%2==1 && thang<8) || (thang%2==0 && thang>7 <=12) ?1:2)
+      {case 1:
+       kq="tháng"+ thang +"/" +nam +"có 31 ngày"
+       break;
+       case 2:
+       kq="tháng"+ thang + "/"+ nam +"có 30 ngày"
+       default:
+       kq="vui lòng nhập lại"
+       }
+       document.getElementById("ra").innerHTML= kq;
+      }
+   
+    
+
+
+    
+
+   </script>
+    
+</body>
+</html.>

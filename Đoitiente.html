@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+    body{
+        margin-left:300px;
+        margin-top: 70px;
+    }
+        </style>
+    
+</head>
+<body>
+    <table>
+        <thead>
+            <th>Amount</th>
+            <th>From Currency</th>
+            <th>To Currency</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="text" id="enter" placeholder="23000"></td>
+                <td>
+                    <select name="" id="from">
+                        <option value="VN">VND</option>
+                        <option value="USD">USD</option>
+                        <option value="BAT">BAT</option>
+                        <option value="KIP">KIP</option>
+                        <oPtion value="CNY">CNY</oPtion>
+                    </select>
+                </td>
+                <td>   <select name="" id="to">
+                    <option value="VN">VND</option>
+                    <option value="USD">USD</option>
+                    <option value="BAT">BAT</option>
+                    <option value="KIP">KIP</option>
+                    <option value="CNY">CNY</option>
+                </td>
+                <td>
+                    <input type="button" value="Convert" onclick="convert()">
+                </td>
+            </tbody>
+            </table>
+            <div id='result'></div>
+            <script>
+                function convert(){
+                    let giatien = document.getElementById('enter').value;
+                    let from = document.getElementById('from').value;
+                    let to  = document.getElementById('to').value;
+                    if(from =="VN" && to =="USD"){
+                        document.getElementById('result').innerHTML=giatien/23000 + "USD"
+                    }
+                     if(from =="USD" && to =="VN"){
+                        document.getElementById('result').innerHTML=giatien*23000 + "VN"
+                    }
+                    if(from =="VN" && to =="BAT"){
+                        document.getElementById('result').innerHTML=giatien/700 + "BAT"
+                    }
+                    if(from =="BAT" && to =="VN"){
+                        document.getElementById('result').innerHTML=giatien*700 + "VN"
+                    }
+                    if(from =="VN" && to =="KIP"){
+                        document.getElementById('result').innerHTML=giatien/2.75 + "KIP"
+                    }
+                    if(from =="KIP" && to =="VN"){
+                        document.getElementById('result').innerHTML=giatien*2.75 + "VN"
+                    }
+                    if(from =="CNY" && to =="VN"){
+                        document.getElementById('result').innerHTML=giatien/3000 + "VN"
+                    }
+                    if(from =="VN" && to =="CNY"){
+                        document.getElementById('result').innerHTML=giatien*3000 + "CNY"
+                    }
+                }
+            </script>
+           
+           
+</body>
+</html>

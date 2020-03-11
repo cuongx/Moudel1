@@ -1,0 +1,12 @@
+<h1 style="position: absolute; left: 200px; top: 80px;">Do You Love Me</h1>
+<button style="position: absolute;left: 250px;top: 140px;" onclick="amount=alert('Xin Chào Minh Là Cường')">Yes</button>
+<button style="position: absolute;left: 290px;top: 140px;" onclick="amount" onmouseover="bam()" id="No">No</button>
+<script>
+    function bam() {
+        let a = document.getElementById("No");
+        let b = Math.floor((Math.random() * 1000) + 1);
+        a.style.left = b;
+        let c = Math.floor((Math.random() * 500) + 1);
+        a.style.top = c;
+    }
+</script>
