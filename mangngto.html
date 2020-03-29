@@ -1,0 +1,20 @@
+
+<script>
+function isPrime(num){
+let isPrime=true;
+num=prompt("nhập số")
+for(let i=2;i<=Math.sqrt(num);i++){
+  
+  if(num==2 || num==0){isPrime=false}
+
+else{num%i==0
+    isPrime=false}
+  if(isPrime){
+    isPrime= true
+  }
+}
+
+return isPrime
+}
+alert (isPrime())
+</script> 

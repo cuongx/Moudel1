@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript function to check whether a given value is US zip code or not</title>
+</head>
+<body>
+    <script>
+        function is_mabuuchinh(str) {
+        regexp = /^[0-9]{5}(?:-[0-9]{4})?$/;
+        if (regexp.test(str)) {
+            return true; 
+        } 
+        return false;
+}
+var ma = '03201-2150'
+    alert(is_mabuuchinh(ma));
+    ma = '7892';
+    alert((ma));
+
+    </script>
+</body>
+</html>

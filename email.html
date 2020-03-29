@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Nhập email của bạn</p>
+
+    <form>
+      <input type="text" id="email" /><input type="button"value="Nhập" onclick="nhap();"/>
+    </form>
+    <script>
+      function nhap() {
+        //   console.log('chao ' + document.getElementById('email').value); // bam Ctrl + ? de comment ON/OFF nhe
+        RegExp = /^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\.[A-Za-z0-9]+)$/;
+        let att = RegExp.test(document.getElementById('email').value); // kiem tra email tra ve true / false
+        if (att) {
+          console.log("khớp với email");
+        } else {
+         
+          console.log("không khớp với email");
+        }
+      }
+    </script>
+  </body>
+</html>

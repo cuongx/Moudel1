@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     class Person{
+  constructor (n,c,a,w,h){
+            this.name=n
+            this.competion=c;
+            this.age=a;
+            this.weight=w;
+            this.height=h;
+  }
+
+        greeting (){
+        return  "Tôi tên là: " + this.name + "<br>" +
+          "Môn thi đấu: "+this.competion + "<br>" +
+          " Tuổi: " + this.age + "<br>"+
+          "Cân nặng: "+this.weight + "<br>"+
+          "Chiều cao: "+ this.height + "<br>"
+        }
+        asroma(){
+            return this.age >= 18? "có người yêu" :"có bồ" + "<br>"
+        }
+        ty(){
+            return this.height >=65? "cao" : "thấp"+ "<br>"
+        }
+        static breathe(){
+            return "vẫn thở vẫn sống"+"<br>"
+        }
+        }
+
+        class Student extends Person {
+            constructor(n,c,a,w,h,p){
+               super (n,c,a,w,h)
+               return this.phone = p ;        
+            }
+          greeting(){
+                return super.greeting() 
+                + "Số điện thoại: " + this.phone; 
+            }
+          }  
+        
+     
+      let cuong = new Person("Đinh Xuân Cường","Đá Bóng",18,"58kg","1m68")
+      document.write(cuong.greeting()+"<br>");
+      document.write(Person.breathe()+"<br>")
+
+     let tuan =new Person("Nguyễn Đình Tuấn","Vaelybal",16,"57kg","1m67")
+     document.write(tuan.greeting()+"<br>")
+     document.write(tuan.asroma() + "<br>")
+     document.write(tuan.ty()+"<br>")
+
+     let quang = new Student("Đinh Mạnh Quang","Cầu Long","15","54kg","1m65")
+     document.write(quang.greeting()+ "<br>")
+     document.write(quang.asroma()+   "<br>")
+
+     let thien =new Student("Đinh Đức Thiện","Bóng Đá",18,"53kg","53kg")
+     document.write(thien.greeting()+ "<br>")
+     document.write(thien.asroma()  + "<br>")
+
+     let hoang =new Student("Đinh Xuân Hoàng","Patin",19,"56kg","1m63")
+     document.write(hoang.greeting()+"<br>")
+     document.write(hoang.asroma()+"<br>")
+    </script>
+</body>
+</html>
